@@ -12,7 +12,7 @@ class Devices:
     all_devices: list = field(default_factory=list)
     query_params: Optional[dict] = {
         "match": 0,
-        "operator": "AND",
+        "operator": "ND",
         "pageNumber": 1,
         "pageSize": 50,
         "sortAttribute": "lastreported",
