@@ -1,11 +1,9 @@
-import csv
+import os
 import urllib
 import pandas as pd
-from dateutil.parser import parse
-from sqlalchemy import Column, Date, Float, Integer, String, create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 from devices_thread import get_devices
+from dotenv import load_dotenv
 
 
 def create_db_engine_object():
