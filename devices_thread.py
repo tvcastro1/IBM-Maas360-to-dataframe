@@ -25,7 +25,7 @@ def fetch_devices_for_page(token, page_number, all_devices, query_params):
     all_devices.extend(devices)
 
 
-def get_devices(token):
+def get_devices(token=auth()):
     """
     Essa função busca todos os dispositivos disponíveis.
 
@@ -67,7 +67,6 @@ def get_devices(token):
 
 if __name__ == "__main__":
     st = time.time()
-    auth_token = auth()
-    print(get_devices(auth_token))
+    print(get_devices())
     et = time.time()
     print(f"tempo de execução: {et - st}")

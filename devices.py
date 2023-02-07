@@ -4,7 +4,7 @@ from endpoints import DEVICES_ENDPOINT
 import time
 
 
-def get_devices(token):
+def get_devices(token=auth()):
     all_devices = []
 
     """
@@ -63,7 +63,6 @@ def get_devices(token):
 
 if __name__ == "__main__":
     st = time.time()
-    auth_token = auth()
-    print(get_devices(auth_token))
+    print(get_devices())
     et = time.time()
     print(f"tempo de execução: {et - st}")
